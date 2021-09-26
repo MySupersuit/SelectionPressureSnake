@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+  <head lang="en">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <link href="//netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap-combined.no-icons.min.css" rel="stylesheet"> -->
+    <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/3.2.1/css/font-awesome.css" rel="stylesheet">   -->
+    <title>NO SIGNS ALLOWED</title>
+    <!-- Link our styles from main.css -->
+    <link rel="stylesheet" type="text/css" href="main.css" />
+  </head>
+  <body>
+    <!-- #gameContainer is the main game board-->
+    <!-- <div style="min-height:; position: relative; display: inline-block;"> -->
+    
+      <div id="musicContainer">
+        <!-- <span>NO SIGNS ALLOWED - SELECTION PRESSURE</span> -->
+      </div>
+      <audio style="display: none;" controls id="music">
+        <source src="./media/selectionpressure01-26.mp3" type="audio/wav">
+      </audio>
+      <div id="loader"></div>
+      <div id="leaderboardDiv">
+        <table class="styled-table" id="leaderboardTable">
+          <thead>
+            <tr>
+              <th>#</th>
+              <th>NAME</th>
+              <th>SCORE</th>
+            </tr>
+          </thead>
+          <tbody id="lboardBody"></tbody>
+        </table>
+      </div>
+    
+    <div id="mainGameContainer" class="container"> 
+      <div id="gameContainer"></div>
+      <img src="./media/bottomwWriting.png" class="roof"/>
+
+      <div id="gameover">
+        <h1 id="gameOverH1">GAME OVER</h1>
+        <button class="endgameButton" onclick="restart()">RESTART</button>
+        <br>
+        <input id="submit_name" type="text" placeholder="Name">
+        <button class="endgameButton" onclick="submitScore()">SUBMIT SCORE</button>
+        <br>
+        <p id="submit_conf"></p>
+      </div>
+    </div>
+
+    <!-- #scoreContainer contains the scores  -->
+    <div id="scoreContainer">
+      <div class="scoreBoard">POINTS:<span id="pointsEarned"></span></div>
+      <br>
+      <!-- <div class="scoreBoard"><span id="pointsToGo"></span></div> -->
+      <!-- <span>(get 30 to unlock the play/pause button...)</span> -->
+      <!-- <div class="scoreBoard">Blocks: <span id="blocksTravelled">0</span></div> -->
+    </div>
+
+    <!-- #onScreenControllers contains the navigation buttons for mobile screens -->
+    <div id="onScreenControllers">
+      <button id="leftButton">◀️</button>
+      <div>
+        <button id="upButton">🔼</button>
+        <button id="downButton">🔽</button>
+      </div>
+      <button id="rightButton">▶️</button>
+    </div>
+
+    <div id="leaderboardButton">
+      <button id="lbut" onclick="toggleLeaderboard()">LEADERBOARD</button>
+      <!-- <button id="playpause" onclick="togglePlay()"><span id="buttonSpan"><i class="fa fa-play"></i></span></button> -->
+      <button id="playpause" onclick="togglePlay()"><span id="buttonSpan"><i class="fa fa-play"></i></span></button>
+      <!-- <button id="spotify" ><span id="spotifySpan"><i class="fa fa-spotify"></i></span></button> -->
+      <!-- <div id="socials"> -->
+      <a id="spohref" target = "_blank" href = "https://open.spotify.com/artist/48kkEl0sfrgbIUj8et1iNB?si=mDtwoeHmQ1a_PIncf_CDHw"><button id="spotify" ><span id="spotifySpan"><i style="vertical-align: middle;" class="fa fa-spotify"></i></span></button></a>
+      <a id="instref" target = "_blank" href = "https://instagram.com/no.signs.allowed"><button id="instagram" ><span id="instaSpan"><i style="vertical-align: middle;" class="fa fa-instagram"></i></span></button></a>
+
+      <!-- </div> -->
+      <!-- <a href="https://open.spotify.com/artist/48kkEl0sfrgbIUj8et1iNB?si=mDtwoeHmQ1a_PIncf_CDHw" target="_blank" id="spotify" class="spotifyButton"><span id="spotifySpan"><i class="fa fa-spotify"></i></span></a> -->
+      <!-- <a href="https://instagram.com/no.signs.allowed" target="_blank" id="instagram"><span id="instaSpan"><i class="fa fa-instagram"></i></span></a> -->
+
+      <!-- <button id="instagram" onclick="instagram()"><span id="instaSpan"><i class="fa fa-instagram"></i></span></button> -->
+
+    </div>
+
+    <!-- <div class="developerDetails">
+      <div>
+        Developed by
+        <a href="https://rabiroshan.com/" target="_blank">Rabi Roshan.</a>
+      </div>
+      <div>
+        View source code on
+        <a href="https://github.com/RabiRoshan/snake_game" target="_blank"
+          >GitHub.</a
+        >
+      </div>
+    </div> -->
+  </body>
+
+  <!-- #Load our jscript.js containing the game logic -->
+  <script src="jscript.js"></script>
+</html>
