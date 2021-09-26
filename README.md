@@ -1,4 +1,4 @@
-# SelectionPressureSnake
+# Selection Pressure Snake
 Simple snake clone for the release of Selection Pressure - No Signs Allowed
 
 Using
