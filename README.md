@@ -8,6 +8,8 @@ Using
 * MongoDB
 * Heroku
 
+adapted from some snake game tutorial online somewhere, can't find it sorry!
+
 [Play game here!](https://selection-pressure.herokuapp.com/)
 
 [Spotify](https://open.spotify.com/artist/48kkEl0sfrgbIUj8et1iNB?si=P5JwX5fdRlSfHBf4xeqILw&dl_branch=1)
